@@ -58,6 +58,7 @@ class Inventory extends React.PureComponent {
 					type="text"
 					value={fish.image}
 				/>
+				<button onClick={() => this.props.removeFish(key)}>Remove fish</button>
 			</div>
 		);
 	}
