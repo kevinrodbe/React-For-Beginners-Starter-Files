@@ -1,7 +1,7 @@
 import React from 'react';
 import { formatPrice } from '../helpers';
 
-class Order extends React.Component {
+class Order extends React.PureComponent {
 
   constructor() {
     super();
@@ -22,9 +22,10 @@ class Order extends React.Component {
         <span className="price">{formatPrice(count * fish.price)}</span>
       </li>
     )
-  }
+	}
 
   render() {
+		console.log('order');
     const orderIds = Object.keys(this.props.order);
     const total = orderIds.reduce((prevTotal, key) => {
       const fish = this.props.fishes[key];
