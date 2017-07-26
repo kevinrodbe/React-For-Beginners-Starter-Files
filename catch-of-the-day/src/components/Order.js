@@ -1,5 +1,7 @@
 import React from 'react';
 import { formatPrice } from '../helpers';
+import CSSTransitionGroup from 'react-addons-css-transition-group'
+import PropTypes from 'prop-types';
 
 class Order extends React.PureComponent {
 
@@ -19,7 +21,18 @@ class Order extends React.PureComponent {
 
     return (
       <li key={key}>
-        <span>{count}lbs {fish.name} {removeButton}</span>
+				<span>
+					<CSSTransitionGroup
+						className="count"
+						component="span"
+						transitionEnterTimeout={250}
+						transitionLeaveTimeout={250}
+						transitionName="count"
+					>
+						<span key={count}>{count}</span>
+					</CSSTransitionGroup>
+					lbs {fish.name} {removeButton}
+				</span>
         <span className="price">{formatPrice(count * fish.price)}</span>
       </li>
     )
@@ -41,16 +54,28 @@ class Order extends React.PureComponent {
     return (
       <div className="order-wrap">
         <h2>Your Order</h2>
-        <ul className="order">
+				<CSSTransitionGroup
+					className="order"
+					component="ul"
+					transitionEnterTimeout={500}
+					transitionLeaveTimeout={500}
+					transitionName="order"
+				>
           {orderIds.map(this.renderOrder)}
           <li className="total">
             <strong>Total -{orderIds}-: </strong>
             {formatPrice(total)}
           </li>
-        </ul>
+        </CSSTransitionGroup>
       </div>
     )
   }
 }
+
+Order.propTypes = {
+	fishes: PropTypes.object.isRequired,
+	order: PropTypes.object.isRequired,
+	removeFromOrder: PropTypes.func.isRequired
+};
 
 export default Order;

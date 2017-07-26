@@ -1,5 +1,6 @@
 import React from 'react';
 import { formatPrice } from '../helpers';
+import PropTypes from 'prop-types';
 
 const Fish = (props) => {
   const { details, index, addToOrder } = props;
@@ -22,5 +23,11 @@ const Fish = (props) => {
     </li>
   )
 }
+
+Fish.propTypes = {
+	addToOrder: PropTypes.func.isRequired,
+	details: PropTypes.object.isRequired,
+	index: PropTypes.string.isRequired
+};
 
 export default Fish;
