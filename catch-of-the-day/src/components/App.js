@@ -126,8 +126,9 @@ class App extends React.Component {
 					addFish={this.addFish}
 					fishes={this.state.fishes}
 					loadSamples={this.loadSamples}
-					updateFish={this.updateFish}
 					removeFish={this.removeFish}
+					storeId={this.props.match.params.storeId}
+					updateFish={this.updateFish}
         />
       </div>
     )
@@ -135,7 +136,7 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-	params: PropTypes.object
+	match: PropTypes.object
 };
 
 export default App;
