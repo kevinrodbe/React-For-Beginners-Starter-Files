@@ -12,7 +12,7 @@ class App extends React.Component {
     super();
     this.addFish = this.addFish.bind(this);
     this.addToOrder = this.addToOrder.bind(this);
-    this.loadSamples = this.loadSamples.bind(this);
+    // this.loadSamples = this.loadSamples.bind(this); // without use bind in constructor
     this.removeFish = this.removeFish.bind(this);
     this.updateFish = this.updateFish.bind(this);
     this.removeFromOrder = this.removeFromOrder.bind(this);
@@ -72,11 +72,12 @@ class App extends React.Component {
 		this.setState({ fishes });
 	}
 
-  loadSamples() {
+	// without use bind in constructor
+  loadSamples = () => {
     this.setState({
       fishes: sampleFishes
     })
-  }
+  };
 
   addToOrder(key) {
     // take a copy of our state
