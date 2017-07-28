@@ -1,7 +1,8 @@
 {
   "name": "cotd",
   "version": "0.0.1",
-  "private": true,
+	"private": true,
+	"homepage": "https://kevinrodbe.github.io/fishes-react/",
   "devDependencies": {
     "autoprefixer-stylus": "0.14.0",
     "babel-eslint": "^7.2.3",
