@@ -1,9 +1,11 @@
 ![](http://wes.io/dgAQ/content)
 
-# From React For Beginners — [ReactForBeginners.com](https://ReactForBeginners.com)
-I've update all node packages
+# From [ReactForBeginners.com](https://ReactForBeginners.com)
+❗I've update all node packages
 
-Deployed: https://cotd-pnhopjxbiv.now.sh/store/defeated-clean-syllabuses
+Deployed:
+- https://cotd-pnhopjxbiv.now.sh
+- https://kevinrodbe.github.io/fishes-react/
 
 ## To Start
 
