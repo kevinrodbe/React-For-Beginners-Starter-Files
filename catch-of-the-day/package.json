@@ -1,8 +1,8 @@
 {
   "name": "cotd",
   "version": "0.0.1",
-	"private": true,
-	"homepage": "https://kevinrodbe.github.io/fishes-react/",
+  "private": true,
+  "homepage": "https://kevinrodbe.github.io/fishes-react/",
   "devDependencies": {
     "autoprefixer-stylus": "0.14.0",
     "babel-eslint": "^7.2.3",
@@ -13,9 +13,10 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-prettier": "^2.1.2",
     "eslint-plugin-react": "^7.1.0",
+    "gh-pages": "^1.0.0",
     "prettier": "^1.5.2",
-		"react-scripts": "1.0.10",
-		"serve": "^6.0.3",
+    "react-scripts": "1.0.10",
+    "serve": "^6.0.3",
     "stylus": "0.54.5"
   },
   "dependencies": {
@@ -31,6 +32,7 @@
   },
   "scripts": {
 		"now-start": "cd build && serve -s ./",
+		"gh": "cd build && cp index.html 404.html && gh-pages -d ./",
     "start": "react-scripts start",
     "watch": "concurrently --names \"webpack, stylus\" --prefix name \"npm run start\" \"npm run styles:watch\"",
     "build": "react-scripts build",
