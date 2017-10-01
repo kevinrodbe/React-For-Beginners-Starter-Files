@@ -1,7 +1,7 @@
 ![](http://wes.io/dgAQ/content)
 
 ### From [WesBos's course](https://ReactForBeginners.com)
-❗I've update all node packages
+❗I've update all node packages (27/07/17)
 
 Deployed:
 - https://kevinrodbe.github.io/fishes-react/
