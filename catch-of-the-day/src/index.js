@@ -18,6 +18,6 @@ const Root = () => {
       </Switch>
     </BrowserRouter>
   );
-}
+};
 
 render(<Root/>, document.querySelector('#main'));
